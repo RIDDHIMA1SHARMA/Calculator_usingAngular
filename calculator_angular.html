@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngularJS Calculator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body ng-app="calculatorApp" ng-controller="CalculatorController">
+
+    <div class="calculator">
+        <h2>AngularJS Calculator</h2>
+
+        <input type="number" ng-model="num1" placeholder="Enter first number">
+        <input type="number" ng-model="num2" placeholder="Enter second number">
+
+        <div class="buttons">
+            <button ng-click="calculate('+')">+</button>
+            <button ng-click="calculate('-')">-</button>
+            <button ng-click="calculate('*')">×</button>
+            <button ng-click="calculate('/')">÷</button>
+        </div>
+
+        <h3>Result: {{ result }}</h3>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
